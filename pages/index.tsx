@@ -1,5 +1,9 @@
 import Head from 'next/head'
-import { Banner, Navbar, StatsBanner } from '../components'
+import { Banner, Navbar, StatsBanner, WhyAICard } from '../components'
+import { StatType } from '../types';
+import { WhyAIConsts } from '../utils';
+
+
 
 
 export default function Home() {
@@ -14,6 +18,18 @@ export default function Home() {
         <Navbar />
         <Banner />
         <StatsBanner />
+      </section>
+      {/* why to participate in ai challenges section */}
+      <section>
+        <h1>Why Participate in <span style={{color: '#44924c'}}>AI Challenges?</span></h1>
+        <div style={{margin: '4.5rem 10rem 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.188rem'}}>
+          {
+            WhyAIConsts.map(({heading, subHeading, icon}: StatType) =>(
+              <WhyAICard heading={heading} subHeading={subHeading} icon={icon}/>
+            ))
+          }
+        </div>
+         
       </section>
 
       <footer>Cards will be displayed here!!</footer>

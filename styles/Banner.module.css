@@ -39,3 +39,28 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+/* why participate in AI */
+.WhyAI__card__container{
+    background-color: #F8F9FD;
+    width: 33.875rem;
+    height: 17.25rem;
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.WhyAI__card__container div{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.WhyAI__card__container p{
+    font-weight: 500;
+    color: #64607D;
+    font-size: 16px;
+}

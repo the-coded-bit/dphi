@@ -21,3 +21,12 @@ hr{
     height: 2rem;
     background-color: #C4C4C4;
 }
+
+h1{
+ font-family: 'Poppins', sans-serif;
+ font-weight: 600;
+ font-size: 32px;
+ line-height: 20px;
+ text-align: center; 
+ margin-top: 5rem;  
+}
