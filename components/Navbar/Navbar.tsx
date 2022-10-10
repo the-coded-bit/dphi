@@ -6,7 +6,7 @@ import { navStyles } from '../../styles';
 const Navbar: React.FC = () => {
     return (
         <nav className={navStyles.nav__container}>
-            <Image src={navLogo} layout='fixed' />
+            <Image src={navLogo} layout='fixed'  style={{cursor: 'pointer'}}/>
         </nav>
     )
 }

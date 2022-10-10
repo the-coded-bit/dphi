@@ -1,0 +1,71 @@
+.challenge__wrapper {
+    padding-left: 5.5rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+.title {
+    height: 6.5rem;
+    background-color: #f8f9fd;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    width: 100%;
+    padding: 2.5rem 0 0 5.5rem;
+}
+
+.challenge__field {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.form__heading {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.challenge__name__input {
+    height: 39px;
+    width: 453px;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px;
+    outline: none;
+    padding: 20px 9px;
+    font-family: 'Inter';
+
+}
+
+.challenge__image__upload {
+    width: 14.75rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #F4F4F4;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.challenge__submit__button {
+    outline: none;
+    border: none;
+    width: 13.375rem;
+    height: 2.8rem;
+    background: #44924C;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 18px;
+    margin-bottom: 20px;
+}
