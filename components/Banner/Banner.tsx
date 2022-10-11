@@ -23,7 +23,7 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <Image src={headerLogo} layout='fixed' />
+        <Image src={headerLogo} layout='fixed' alt='header'/>
       </div>
     </header>
   )

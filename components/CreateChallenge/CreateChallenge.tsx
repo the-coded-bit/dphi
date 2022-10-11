@@ -27,7 +27,7 @@ const dropDownStyles: React.CSSProperties = {
 }
 
 
-const createChallenge: React.FC = () => {
+const CreateChallenge: React.FC = () => {
     const [value, setValue] = React.useState(levels[0].value);
 
     const handleChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
@@ -71,7 +71,7 @@ const createChallenge: React.FC = () => {
                     <label className={createStyles.challenge__image__upload}>
                         <input type='file' accept='image/*' style={{ display: 'none' }} />
                         <span>Upload</span>
-                        <Image src={uploadIcon} layout='fixed' />
+                        <Image src={uploadIcon} layout='fixed' alt='upload icon'/>
                     </label>
                 </div>
                 {/* level type */}
@@ -87,4 +87,4 @@ const createChallenge: React.FC = () => {
 
 }
 
-export default createChallenge; 
+export default CreateChallenge; 

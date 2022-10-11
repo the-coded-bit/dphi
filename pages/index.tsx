@@ -36,7 +36,7 @@ export default function Home() {
         <h2>Explore Challenges</h2>
         <div className={homeStyles.explore}>
           <div className={homeStyles.search}>
-            <Image src={searchIcon} layout='fixed' />
+            <Image src={searchIcon} layout='fixed' alt='search'/>
             <input
               type='text'
               placeholder='Search '

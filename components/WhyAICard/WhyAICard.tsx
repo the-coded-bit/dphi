@@ -7,7 +7,7 @@ const WhyAICard = ({ heading, subHeading, icon }: StatType) => {
     return (
         <article className={bannerStyles.WhyAI__card__container}>
             <div>
-                <Image src={icon} layout='fixed' />
+                <Image src={icon} layout='fixed' alt={`${icon}`}/>
             </div>
             <div>{heading}</div>
             <p>{subHeading}</p>

@@ -13,7 +13,7 @@ const Stat = ({ heading, subHeading, icon}: StatType) => {
                 <div className={statStyles.content__subheading}>{subHeading}</div>
             </div>
             <div>
-                <Image src={icon} layout='fixed'/>
+                <Image src={icon} layout='fixed' alt={`${icon}`}/>
             </div>
         </div>
     )

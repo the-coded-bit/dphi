@@ -20,7 +20,7 @@ const Filter = () => {
     <button style={filterStyles}>
         <span>Filter</span>
         <div>
-            <Image src={downArrowIcon} layout='fixed'/>
+            <Image src={downArrowIcon} layout='fixed' alt='down arrow'/>
         </div>
 
     </button>
