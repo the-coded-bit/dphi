@@ -1,42 +1,17 @@
 
-import * as React from 'react';
+import React from 'react';
+import { DropdownProps, Options } from '../../types';
 
-const DropDown = () => {
-  const options = [
-    { label: 'Fruit', value: 'fruit' },
-    { label: 'Vegetable', value: 'vegetable' },
-    { label: 'Meat', value: 'meat' },
-  ];
-
-  const [value, setValue] = React.useState('fruit');
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  return (
-    <div>
-      <Dropdown
-        options={options}
-        value={value}
-        onChange={handleChange}
-      />
-
-      <p>We eat {value}!</p>
-    </div>
-  );
-};
-
-const Dropdown = ({ value, options, onChange }) => {
+const Dropdown = ({ value, options, onChange, style }: DropdownProps) => {
   return (
     <label>
-      <select value={value} onChange={onChange}>
-        {options.map((option) => (
-          <option value={option.value}>{option.label}</option>
+      <select value={value} onChange={onChange} style={style}>
+        {options.map(({ label, value }: Options) => (
+          <option value={value} key={label}>{label}</option>
         ))}
       </select>
     </label>
   );
 };
 
-export default DropDown;
+export default Dropdown;
