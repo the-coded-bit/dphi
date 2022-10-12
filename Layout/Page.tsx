@@ -3,15 +3,15 @@ import React from 'react'
 import { Navbar } from '../components';
 import { LayoutProps } from '../types';
 
-const Page : React.FC<{children: JSX.Element[] | JSX.Element, description: string, title : string}> = ({children, description, title}: LayoutProps) => {
+const Page: React.FC<{ children: JSX.Element[] | JSX.Element, description: string, title: string }> = ({ children, description, title }: LayoutProps) => {
   return (
     <main>
-        <Head>
+      <Head>
         <title>{title}</title>
-        <meta name="description" content={description}/>
+        <meta name="description" content={description} />
         <link rel="icon" href="/favico.ico" />
       </Head>
-      <Navbar/>
+      {/* <Navbar /> */}
       {
         children
       }

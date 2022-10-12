@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Banner, FilterButton, StatsBanner, WhyAICard } from '../components'
+import { Banner, FilterButton, Navbar, StatsBanner, WhyAICard } from '../components'
 import { Page } from '../Layout';
 import { searchIcon } from '../public';
 import { homeStyles } from '../styles';
@@ -16,6 +16,7 @@ export default function Home() {
   return (
     <Page {...pageProps}>
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Navbar />
         <Banner />
         <StatsBanner />
       </section>
