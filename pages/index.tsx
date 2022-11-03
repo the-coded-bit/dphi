@@ -1,18 +1,17 @@
-import Image from 'next/image';
-import { Banner, FilterButton, Navbar, StatsBanner, WhyAICard } from '../components'
+import { InferGetServerSidePropsType } from 'next';
+import { Banner, Challenges, Navbar, StatsBanner, WhyAICard } from '../components'
 import { Page } from '../Layout';
-import { searchIcon } from '../public';
-import { homeStyles } from '../styles';
-import { LayoutProps, StatType } from '../types';
-import { WhyAIConsts } from '../utils';
+import { LayoutProps, StatType, IChallenge } from '../types';
+import { getHackathons, WhyAIConsts } from '../utils';
 
 const pageProps: LayoutProps = {
   title: 'Dphi - Hackathon',
   description: 'Dphi hackathon, where students participate in AI/ML hackathons',
 }
 
-export default function Home() {
-  
+export default function Home({ d }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const data: IChallenge[] = JSON.parse(d);
+
   return (
     <Page {...pageProps}>
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -32,23 +31,21 @@ export default function Home() {
         </div>
 
       </section>
-      {/* search */}
-      <section className={homeStyles.search__container}>
-        <h2>Explore Challenges</h2>
-        <div className={homeStyles.explore}>
-          <div className={homeStyles.search}>
-            <Image src={searchIcon} layout='fixed' alt='search'/>
-            <input
-              type='text'
-              placeholder='Search '
-              style={{ height: '100%', width: '100%', outline: 'none', border: 'none', fontFamily: 'Poppins' }} />
-          </div>
-          <FilterButton />
-        </div>
 
-      </section>
-
-      <footer>Cards will be displayed here!!</footer>
+      <footer>
+        <Challenges data={data}/>
+      </footer>
     </Page>
   )
+}
+
+export async function getServerSideProps() {
+  // fetch all the hackthons from firebase
+  const data: IChallenge[] = await getHackathons();
+  const d = JSON.stringify(data);
+  console.log(d);
+
+  return {
+    props: { d }
+  };
 }
