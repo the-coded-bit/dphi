@@ -4,6 +4,14 @@ import React from 'react'
 import { headerLogo } from '../../public'
 import { bannerStyles } from '../../styles'
 
+const buttonStyles : React.CSSProperties = {
+  color: '#003145',
+  border: 'none',
+  font: 'Poppins',
+  fontSize: '18px',
+  fontWeight:'600'
+}
+
 
 
 const Banner = () => {
@@ -18,7 +26,7 @@ const Banner = () => {
         </p>
         <div className={bannerStyles.container__button}>
           <Link href='/create-challenge'>
-            <button>Create Challenge</button>
+            <button style={buttonStyles}>Create Challenge</button>
           </Link>
         </div>
       </div>
