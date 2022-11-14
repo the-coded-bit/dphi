@@ -7,3 +7,4 @@ export { default as DropDown } from './Dropdown/Dropdown';
 export { default as CreateChallenge } from './CreateChallenge/CreateChallenge';
 export { default as ChallengeCard } from './ChallengeCard/ChallengeCard';
 export { default as Challenges } from './Challenges/Challenges';
+export { default as Timer } from './Timer/TimerComp';
