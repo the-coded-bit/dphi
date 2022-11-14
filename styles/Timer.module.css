@@ -1,0 +1,38 @@
+.countdown {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #454545;
+    gap: 4px;
+}
+
+.container_days,
+.container_hours,
+.container_mins,
+.container_seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.day,
+.hours,
+.mins,
+.seconds {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.container_days,
+.container_hours,
+.container_mins,
+.container_seconds > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
