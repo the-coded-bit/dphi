@@ -2,6 +2,7 @@ import { Timestamp } from 'firebase/firestore';
 import Image from 'next/image';
 import React from 'react'
 import { Timer } from '..';
+import { tickIcon } from '../../public';
 import { cardStyles } from '../../styles';
 import { IChallenge, IContestStatus } from '../../types';
 import { getContestStatus } from '../../utils';
@@ -10,7 +11,7 @@ import { getContestStatus } from '../../utils';
 
 const ChallengeCard = ({ id, name, level, description, imageURL, enddate, startdate }: IChallenge) => {
   const status: IContestStatus = getContestStatus(startdate, enddate);
-  const endDate: string = new Timestamp(enddate.seconds, enddate.nanoseconds).toDate().toString();
+  const endDate: string = new Timestamp(enddate.seconds, enddate.nanoseconds).toDate().toDateString();
   const statusStyles: React.CSSProperties = {
     color: status.textColor,
     backgroundColor: status.bgColor,
@@ -46,7 +47,10 @@ const ChallengeCard = ({ id, name, level, description, imageURL, enddate, startd
               <Timer enddate={enddate} />
         }
 
-        <button>participate now</button>
+        <div className={cardStyles.participate__button}>
+          <Image src={tickIcon}/>
+          <span>Participate now</span>
+        </div>
       </div>
     </div>
   )

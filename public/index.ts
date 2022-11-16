@@ -11,3 +11,4 @@ export { default as GroupIcon } from './assets/icons/groups.svg';
 export { default as searchIcon } from './assets/icons/search.svg';
 export { default as downArrowIcon } from './assets/icons/downArrow.svg';
 export { default as uploadIcon } from './assets/icons/upload.svg';
+export { default as tickIcon } from './assets/icons/Group.svg';
