@@ -42,7 +42,7 @@ const ChallengeCard = ({ id, name, level, description, imageURL, enddate, startd
           }
         </div>
         {
-          status.status === 'Past' ? <div style={{color: '#454545'}}>{endDate}</div> :
+          status.status === 'Past' ? <div style={{color: '#454545', height: '63px'}}>{endDate}</div> :
             status.status === 'Upcoming' ? <Timer enddate={startdate} /> :
               <Timer enddate={enddate} />
         }
